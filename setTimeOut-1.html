@@ -7,14 +7,20 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <script>
-        // const arr = [10, 12, 15, 21];
-        for (let i = 0; i < 5; i++) {
+        const arr = [10, 12, 15, 21];
+        let arrLen = arr.length;
+
+        for (let i = 0; i < arrLen - 1; i++) {
             function log() {
-                console.log('Index: ' + i);
+                console.log(i);
             }
-            console.dir(log)
+            console.dir(log) //To see socpe status.
             setTimeout(log, i * 1000);
         }
+
+        // using var i = 0; Output -> 3,3,3 due to global scope of var
+        // using let i = 0; Output -> 0,1,2 due to local scope of let
+        
     </script>
 </head>
 
